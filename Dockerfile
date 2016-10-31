@@ -18,13 +18,11 @@ ENV LDSHARED "gcc -m32 -shared"
 ENV LDFLAGS "-m32 -shared"
 
 # Install setuptools - python-setuptools:i386 doesn't exist in apt
-CMD wget https://pypi.python.org/packages/1d/04/97e37cf85972ea19364c22db34ee8192db3876a80ed5bffd6413dcdabe2d/setuptools-28.7.1.tar.gz
-CMD tar xvzf setuptools-28.7.1.tar.gz
-CMD cd setuptools-28.7.1
-CMD python setup.py install
-CMD cd ..
+RUN wget https://pypi.python.org/packages/1d/04/97e37cf85972ea19364c22db34ee8192db3876a80ed5bffd6413dcdabe2d/setuptools-28.7.1.tar.gz
+RUN tar xvzf setuptools-28.7.1.tar.gz
+RUN cd setuptools-28.7.1; python setup.py install; cd ..
 
 # Install jinja2 - python-jinja2:i386 doesn't exist in apt
-CMD easy_install jinja2
+RUN easy_install jinja2
 
 
