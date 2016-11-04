@@ -13,6 +13,17 @@ RUN apt-get install -y libpython2.7-dev:i386 \
                        python-numpy:i386 \
                        cython:i386
 
+ENTRYPOINT ["linux32"]
+
+RUN locale-gen "en_US.UTF-8"
+RUN dpkg-reconfigure locales
+
+ENV LANG en_US.UTF-8
+ENV LC_ALL en_US.UTF-8
+ENV LC_CTYPE en_US.UTF-8
+
+ENV PYTHONIOENCODING UTF8
+
 ENV CC "gcc -m32"
 ENV LDSHARED "gcc -m32 -shared"
 ENV LDFLAGS "-m32 -shared"
