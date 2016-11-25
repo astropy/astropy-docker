@@ -10,8 +10,7 @@ RUN apt-get install -y wget
 RUN apt-get install -y libpython2.7-dev:i386 \
                        gcc:i386 \
                        python-dev:i386 \
-                       python-numpy:i386 \
-                       cython:i386
+                       python-numpy:i386
 
 ENTRYPOINT ["linux32"]
 
@@ -35,5 +34,8 @@ RUN cd setuptools-28.7.1; python setup.py install; cd ..
 
 # Install jinja2 - python-jinja2:i386 doesn't exist in apt
 RUN easy_install jinja2
+
+# Install Cython - we have to do it here because the built-in version is too old
+RUN easy_install cython
 
 
