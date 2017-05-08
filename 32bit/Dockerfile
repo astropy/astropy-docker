@@ -38,4 +38,6 @@ RUN easy_install jinja2
 # Install Cython - we have to do it here because the built-in version is too old
 RUN easy_install cython
 
-
+# Install an updated numpy.  The built-in version is 1.8.2, but we need
+# >= 1.9.  Here we install v1.12.1 which is the latest released version.
+RUN easy_install numpy==1.12.1
