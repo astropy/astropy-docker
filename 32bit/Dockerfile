@@ -2,7 +2,7 @@
 # run 32-bit tests for Astropy
 
 FROM ubuntu:14.04
-MAINTAINER Thomas P. Robitaille <thomas.robitaille@gmail.com>
+LABEL authors="Thomas Robitaille <thomas.robitaille@gmail.com>, Larry Bradley <larry.bradley@gmail.com>"
 
 RUN dpkg --add-architecture i386
 RUN apt-get update
