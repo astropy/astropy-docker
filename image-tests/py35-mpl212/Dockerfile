@@ -2,12 +2,6 @@
 # image tests with e.g. pytest-mpl and guarantees fixed versions of other
 # libraries such as freetype.
 
-FROM ubuntu:16.04
-LABEL authors="Thomas Robitaille <thomas.robitaille@gmail.com>"
+FROM astropy/image-tests-py35-base:1.0
 
-RUN apt-get update
-RUN apt-get install -y python3-pip python3-jinja2 cython3 libfreetype6 libpng16-16 git
-RUN apt-get install -y --no-install-recommends texlive-latex-base texlive-latex-extra texlive-fonts-recommended dvipng
-RUN pip3 install numpy==1.14.0 matplotlib==2.1.2 scipy==1.0.0
-RUN pip3 install pytest pytest-mpl pytest-astropy
-
+RUN pip3 install pytest pytest-mpl pytest-astropy numpy==1.14.0 matplotlib==2.1.2 scipy==1.0.0

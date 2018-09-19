@@ -4,4 +4,4 @@
 
 FROM astropy/image-tests-py35-base:1.0
 
-RUN pip3 install pytest pytest-mpl pytest-astropy numpy==1.10.4 matplotlib==1.5.3 scipy==1.0.0
+RUN pip3 install pytest pytest-mpl pytest-astropy numpy==1.14.5 matplotlib==2.2.2 scipy==1.1.0
