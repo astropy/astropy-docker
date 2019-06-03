@@ -8,7 +8,7 @@ FROM ubuntu:16.04
 LABEL authors="Thomas Robitaille <thomas.robitaille@gmail.com>"
 
 RUN apt-get update
-RUN apt-get install -y libfreetype6 libpng16-16 git wget gcc make zlib1g-dev libssl-dev
+RUN apt-get install -y libfreetype6 libpng16-16 git wget gcc make zlib1g-dev libssl-dev libbz2-dev
 RUN apt-get install -y --no-install-recommends texlive-latex-base texlive-latex-extra texlive-fonts-recommended dvipng
 
 WORKDIR /tmp
