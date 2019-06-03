@@ -21,11 +21,12 @@ RUN apt-get install -y --no-install-recommends libfreetype6 libpng16-16 git \
                                                cm-super
 
 RUN apt-get install -y ca-certificates
+RUN apt-get install libffi-dev
 
 WORKDIR /tmp
-RUN wget https://www.python.org/ftp/python/3.6.7/Python-3.6.7.tgz
-RUN tar xvzf Python-3.6.7.tgz
-WORKDIR /tmp/Python-3.6.7
+RUN wget https://www.python.org/ftp/python/3.7.3/Python-3.7.3.tgz
+RUN tar xvzf Python-3.7.3.tgz
+WORKDIR /tmp/Python-3.7.3
 RUN ./configure
 RUN make
 RUN make install

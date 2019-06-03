@@ -5,4 +5,4 @@
 FROM astropy/image-tests-py36-base:1.2
 
 RUN pip3 install setuptools pip --upgrade
-RUN pip3 install pytest pytest-mpl pytest-astropy numpy==1.15.4 matplotlib==3.0.2 scipy==1.1.0
+RUN pip3 install pytest pytest-mpl pytest-astropy numpy==1.14.0 matplotlib==2.1.2 scipy==1.0.0
