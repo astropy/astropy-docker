@@ -26,3 +26,31 @@ The latest images can be found [here](https://hub.docker.com/r/astropy/).
 While new images can be added in future for new Matplotlib versions, the
 existing images should ideally not be changed (except for very minor aspects)
 to make sure the tests will continue to pass.
+
+### Base image versions
+
+The base images contain all the required non-Python packages as well as the
+Python installation, but not e.g. Matplotlib and Numpy.
+
+The basic pattern for the image name is
+``astropy/image-tests-py??-base:version``, and the versions are:
+
+* ``1.2``: added libbz2, libfreetype, libpng, pkg-config and cm-super
+
+### Matplotlib image versions
+
+These images include the following extra packages compared to the base image:
+
+* pytest
+* pytest-mpl
+* pytest-astropy
+* numpy
+* matplotlib
+* scipy
+
+The versions of Numpy, Matplotlib and SciPy are pinned. The basic pattern for
+the image names is ``astropy/image-tests-py??-mpl???:version`` and the
+versions are:
+
+* ``1.6``: updated Numpy to 1.16.5 or 1.17.2 depending on the image
+* ``1.5``: re-build with version ``1.2`` of base images
