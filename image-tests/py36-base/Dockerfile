@@ -18,7 +18,8 @@ RUN apt-get install -y --no-install-recommends libfreetype6 libpng16-16 git \
                                                dvipng libfreetype6-dev \
                                                libpng12-dev \
                                                pkg-config \
-                                               cm-super
+                                               cm-super \
+                                               libsqlite3-dev
 
 RUN apt-get install -y ca-certificates
 
