@@ -32,3 +32,5 @@ RUN ./configure
 RUN make
 RUN make install
 WORKDIR /
+
+RUN apt-get install -y g++

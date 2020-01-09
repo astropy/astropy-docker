@@ -2,7 +2,7 @@
 # image tests with e.g. pytest-mpl and guarantees fixed versions of other
 # libraries such as freetype.
 
-FROM astropy/image-tests-py37-base:1.2
+FROM astropy/image-tests-py37-base:1.4
 
 RUN pip3 install setuptools pip --upgrade
 RUN pip3 install pytest pytest-mpl pytest-astropy numpy==1.16.5 matplotlib==3.0.2 scipy==1.1.0

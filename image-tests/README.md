@@ -35,6 +35,8 @@ Python installation, but not e.g. Matplotlib and Numpy.
 The basic pattern for the image name is
 ``astropy/image-tests-py??-base:version``, and the versions are:
 
+* ``1.4``: installed g++
+* ``1.3``: recompiled Python with sqlite3 support
 * ``1.2``: added libbz2, libfreetype, libpng, pkg-config and cm-super
 
 ### Matplotlib image versions
@@ -52,6 +54,7 @@ The versions of Numpy, Matplotlib and SciPy are pinned. The basic pattern for
 the image names is ``astropy/image-tests-py??-mpl???:version`` and the
 versions are:
 
+* ``1.9``: re-built with version ``1.4`` of base images
 * ``1.8``: updated pytest-mpl to 0.11 and pytest-doctestplus to 0.5
 * ``1.7``: updated pytest-astropy and dependencies to latest versions
 * ``1.6``: updated Numpy to 1.16.5 or 1.17.2 depending on the image
